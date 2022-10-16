@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const path = require("path");
 const config = require('dotenv').config()
 const http = require('http')
 const { v4:uuidv4 } = require('uuid')
@@ -13,8 +14,13 @@ const peer = ExpressPeerServer(server,{
 
 app.use('/peerjs', peer);
 //View Engine
+
+// Set 'views' directory for any views 
+// being rendered res.render()
 app.set("view engine", "ejs");
 app.set('views', 'views');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'Public')));
 
  
 // Calling the public folder

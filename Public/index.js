@@ -1,8 +1,4 @@
-const socket = io('/', {
-      path: '/socket.io',
-      transports: ['websocket'],
-      secure: true,
-    });
+const socket = io('/');
 const peer = new Peer();
 let myVideoStream;
 let myId;

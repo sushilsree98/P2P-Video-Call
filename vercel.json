@@ -1,0 +1,10 @@
+{
+   "version": 2,
+   "name": "P2P-video-call",
+   "builds": [
+      { "src": "app.js", "use": "@vercel/node" }
+   ],
+   "routes": [
+      { "src": "/(.*)", "dest": "/app.js" }
+   ]
+}

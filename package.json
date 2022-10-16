@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^2.6.1",
+    "express": "^4.18.2",
+    "peer": "^0.6.1",
+    "socket.io": "^4.5.3",
+    "uuid": "^9.0.0",
+    "vercel": "^28.4.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "name": "web-chat",
+  "version": "1.0.0",
+  "description": "video chat app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js",
+    "deploy": "vercel --prod"
+  },
+  "author": "sushil.sree98@gmail.com",
+  "license": "ISC"
+}
